@@ -1,9 +1,7 @@
 package com.dhabits.ss.demo.controller;
 
-import com.dhabits.ss.demo.domain.model.ResourceObject;
-import com.dhabits.ss.demo.service.ResourceObjectService;
-import com.dhabits.ss.demo.domain.model.*;
-import com.dhabits.ss.demo.service.*;
+import com.dhabits.ss.demo.domain.dto.ResourceObject;
+import com.dhabits.ss.demo.domain.service.ResourceObjectService;
 import lombok.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;

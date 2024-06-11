@@ -1,6 +1,6 @@
-package com.dhabits.ss.demo.repository;
+package com.dhabits.ss.demo.data.repository;
 
-import com.dhabits.ss.demo.domain.entity.UserEntity;
+import com.dhabits.ss.demo.data.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

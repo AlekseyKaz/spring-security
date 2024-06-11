@@ -1,4 +1,4 @@
-package com.dhabits.ss.demo.domain.model;
+package com.dhabits.ss.demo.domain.dto;
 
 import lombok.*;
 

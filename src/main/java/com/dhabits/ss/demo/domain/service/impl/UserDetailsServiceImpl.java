@@ -1,8 +1,8 @@
-package com.dhabits.ss.demo.service.impl;
+package com.dhabits.ss.demo.domain.service.impl;
 
-import com.dhabits.ss.demo.domain.entity.UserEntity;
+import com.dhabits.ss.demo.data.entity.UserEntity;
 import com.dhabits.ss.demo.domain.exception.UserException;
-import com.dhabits.ss.demo.repository.UserRepository;
+import com.dhabits.ss.demo.data.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

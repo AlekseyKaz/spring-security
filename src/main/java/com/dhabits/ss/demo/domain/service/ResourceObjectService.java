@@ -1,13 +1,10 @@
-package com.dhabits.ss.demo.service;
+package com.dhabits.ss.demo.domain.service;
 
-import com.dhabits.ss.demo.domain.entity.ResourceObjectEntity;
-import com.dhabits.ss.demo.domain.model.ResourceObject;
-import com.dhabits.ss.demo.repository.ResourceObjectRepository;
-import com.dhabits.ss.demo.domain.entity.*;
-import com.dhabits.ss.demo.domain.model.*;
-import com.dhabits.ss.demo.repository.*;
-import lombok.*;
-import org.springframework.stereotype.*;
+import com.dhabits.ss.demo.data.entity.ResourceObjectEntity;
+import com.dhabits.ss.demo.data.repository.ResourceObjectRepository;
+import com.dhabits.ss.demo.domain.dto.ResourceObject;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
