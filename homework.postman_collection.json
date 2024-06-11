@@ -56,6 +56,9 @@
 		},
 		{
 			"name": "get token in application",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -72,7 +75,7 @@
 						}
 					]
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",

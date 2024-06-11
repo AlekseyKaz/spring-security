@@ -14,7 +14,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class TokenController {
     private final AuthService authService;
-    @PostMapping("/auth")
+    @GetMapping("/auth")
     public ResponseEntity<Map<String, String>> getToken() {
        return new ResponseEntity<>( authService.authenticate(), HttpStatusCode.valueOf(200));
     }
