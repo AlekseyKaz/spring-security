@@ -1,4 +1,4 @@
-package com.dhabits.ss.demo.domain.entity;
+package com.dhabits.ss.demo.data.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "resource")
 public class ResourceObjectEntity {
 
     @Id

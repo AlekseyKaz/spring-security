@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "bc93c0d3-1246-428d-816a-2c8d4da0e70b",
+		"name": "homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23172562"
+	},
+	"item": [
+		{
+			"name": "getToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "app",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/realms/demo1/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"realms",
+						"demo1",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token in application",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\":\"admin\",\n    \"password\":\"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/token/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"token",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testAuth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVMjlFQnNUTHNnUi1QeG5wTDR4OF9kWFNoaHRKY3o3ZmsxeHczSW1TUlV3In0.eyJleHAiOjE3MTgxMTY5NTcsImlhdCI6MTcxODExNjk1NiwianRpIjoiMDAzNGVlNDktMjAwNy00NTZhLWFhMTctZTQzMGU3YTUxYWYzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgxL3JlYWxtcy9kZW1vMSIsInN1YiI6IjE3ZmJhOWE4LWNlZTktNGI5Ni1hZjZhLTQ4N2VmOTZhODc1MyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwcCIsInNlc3Npb25fc3RhdGUiOiI1YzI1NWYwNi1kZmIzLTQzODQtOTk1ZS1lZjlhOWJmOTkyMjYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzZXIiXX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjVjMjU1ZjA2LWRmYjMtNDM4NC05OTVlLWVmOWE5YmY5OTIyNiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoic3VwZXJ1c2VyQGdtYWlsLmNvbSJ9.reuShQKBuPUcWIymafREEzuuRA8_fDBjpyOHgFyzyze04SPWyWJ6ZOboXmSsS8qX-wl7BVGgBVMDm3MBwioGzpa6cfL_JJrnBr8MwZKGVa7MWD7j2MI03FhIzCOBxsRQc4XlQiOeR_hL3oDZKpOEyIkjmLzprySfAXwOuKop_3fDXt8SttOIWXkKdC4TzNFqhcMMyB8eMd4HKZuNpKE4a4QXnDOaXCuRRCpfnAwsYr3Y5jll2krTS7_KLYXSYcC-GZyoYmWHOvTUpLhR9AHTQMcbGg2l-SgpoJDtKGVWQ_WKwjj_vr56aQS0R87hj8m7JuEXKH437ERtl0FUsXWTaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"value\": \"123\",\n    \"path\": \"2222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/resource/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"resource",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testRefreshToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVMjlFQnNUTHNnUi1QeG5wTDR4OF9kWFNoaHRKY3o3ZmsxeHczSW1TUlV3In0.eyJleHAiOjE3MTgxMTY5NTcsImlhdCI6MTcxODExNjk1NiwianRpIjoiMDAzNGVlNDktMjAwNy00NTZhLWFhMTctZTQzMGU3YTUxYWYzIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgxL3JlYWxtcy9kZW1vMSIsInN1YiI6IjE3ZmJhOWE4LWNlZTktNGI5Ni1hZjZhLTQ4N2VmOTZhODc1MyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFwcCIsInNlc3Npb25fc3RhdGUiOiI1YzI1NWYwNi1kZmIzLTQzODQtOTk1ZS1lZjlhOWJmOTkyMjYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbInVzZXIiXX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjVjMjU1ZjA2LWRmYjMtNDM4NC05OTVlLWVmOWE5YmY5OTIyNiIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiIsImVtYWlsIjoic3VwZXJ1c2VyQGdtYWlsLmNvbSJ9.reuShQKBuPUcWIymafREEzuuRA8_fDBjpyOHgFyzyze04SPWyWJ6ZOboXmSsS8qX-wl7BVGgBVMDm3MBwioGzpa6cfL_JJrnBr8MwZKGVa7MWD7j2MI03FhIzCOBxsRQc4XlQiOeR_hL3oDZKpOEyIkjmLzprySfAXwOuKop_3fDXt8SttOIWXkKdC4TzNFqhcMMyB8eMd4HKZuNpKE4a4QXnDOaXCuRRCpfnAwsYr3Y5jll2krTS7_KLYXSYcC-GZyoYmWHOvTUpLhR9AHTQMcbGg2l-SgpoJDtKGVWQ_WKwjj_vr56aQS0R87hj8m7JuEXKH437ERtl0FUsXWTaA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/token/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"token",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
